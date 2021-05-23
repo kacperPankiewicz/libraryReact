@@ -2,7 +2,11 @@
 import React, { Component,useState } from 'react'
 import { Col, Row, Container, Form,Button } from 'react-bootstrap'
 import photo from '../books.png';
-import axios from 'axios'
+import axios from 'axios';
+
+
+
+
 
 
 
@@ -16,7 +20,7 @@ function Form2() {
             author:auth,
             title:titl
         }).then(resp=>{
-            window.location.reload(true);
+            window.location.reload();
         }) ; 
     }
         return (

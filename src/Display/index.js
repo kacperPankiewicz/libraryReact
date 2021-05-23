@@ -5,6 +5,7 @@ import axios from 'axios'
 
 
 
+
 export default class index extends Component {
     constructor() {
         super();
@@ -65,15 +66,18 @@ export default class index extends Component {
 
         return (
             <Container className="mt-3">
-
-                <Row>
+                  
+                <Row className="border border-2 rounded border-warning bg-dark p-2 mb-3">
+                <Row >
+                    <Col><h1 className="text-light">Find your book!</h1></Col>
+                </Row>
                     <Col><Form.Control onChange={(e) => authorListener(e)}
                         type="text" placeholder="Author" /></Col>
                     <Col><Form.Control onChange={(e) => titleListener(e)}
                         type="text" placeholder="Title" /></Col>
-                    <Col>3</Col>
+                        
                 </Row>
-
+                <Container className="border border-2 rounded border-warning bg-dark p-2">
                 <Table striped bordered hover variant="dark">
                     <thead>
                         <tr>
@@ -83,12 +87,10 @@ export default class index extends Component {
                         </tr>
                     </thead>
                     <tbody>
-
                         {this.state.ro.map(item => <TableElement id={item.id} author={item.author} title={item.title} />)}
-
-
                     </tbody>
                 </Table>
+                </Container>
             </Container>
         )
     }

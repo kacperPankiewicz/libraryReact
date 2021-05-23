@@ -1,6 +1,7 @@
 import { Button } from "bootstrap"
 import { Form } from "react-bootstrap";
 import axios from 'axios';
+import {Symbol} from './symbolStyle';
 
 const TableElement = ({id,author,title}) =>{
 
@@ -20,18 +21,10 @@ const TableElement = ({id,author,title}) =>{
                    {title}
                 </td>
                 <td>
-                    <div onClick={()=>deleteHandler(id)}>Delete</div>
+                    <div onClick={()=>deleteHandler(id)}><Symbol>✘</Symbol></div>
                 </td>
      
             </tr>
-
-
-
-
     );
-
-
-
-
 } ;
 export default TableElement;
